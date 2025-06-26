@@ -255,7 +255,131 @@
 
         <!-- Deals Page -->
         <div id="deals" class="page py-20 bg-white">
-            <div class="container mx-auto px-6"><h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Exclusive Offers & Special Deals</h2><div class="space-y-8"><div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-wrap md:flex-nowrap items-center border-l-4 border-blue-600"><div class="w-full md:w-2/3 md:pr-6 mb-4 md:mb-0"><h3 class="text-2xl font-bold text-blue-800">7-Night Caribbean Getaway - 25% Off!</h3><p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Royal Caribbean</p><p class="text-gray-600">Sail to paradise with special rates on select Oasis of the Seas sailings. Includes onboard credits!</p></div><div class="w-full md:w-1/3 text-left md:text-right"><p class="text-lg font-semibold text-gray-800">From <span class="text-blue-600">$899</span>/person</p><button onclick="navigateTo('contact')" class="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Ask Alan About This Deal</button></div></div><div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-wrap md:flex-nowrap items-center border-l-4 border-green-600"><div class="w-full md:w-2/3 md:pr-6 mb-4 md:mb-0"><h3 class="text-2xl font-bold text-green-800">Alaskan Adventure with Free Excursions</h3><p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Princess Cruises</p><p class="text-gray-600">Book a balcony stateroom or higher and receive a complimentary shore excursion credit. Witness the glaciers up close!</p></div><div class="w-full md:w-1/3 text-left md:text-right"><p class="text-lg font-semibold text-gray-800">From <span class="text-green-600">$1,450</span>/person</p><button onclick="navigateTo('contact')" class="mt-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Ask Alan About This Deal</button></div></div><div class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-wrap md:flex-nowrap items-center border-l-4 border-purple-600"><div class="w-full md:w-2/3 md:pr-6 mb-4 md:mb-0"><h3 class="text-2xl font-bold text-purple-800">Mediterranean Dream - Kids Sail Free</h3><p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Norwegian Cruise Line</p><p class="text-gray-600">The perfect family vacation! Explore Rome, Athens, and more. Offer valid on select summer sailings.</p></div><div class="w-full md:w-1/3 text-left md:text-right"><p class="text-lg font-semibold text-gray-800">From <span class="text-purple-600">$1,199</span>/person</p><button onclick="navigateTo('contact')" class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Ask Alan About This Deal</button></div></div></div></div>
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Exclusive Offers & Special Deals</h2>
+                <div class="space-y-8">
+                    <!-- Deal Card: Royal Caribbean -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-blue-600">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Royal_Caribbean_logo_%282024%29.svg/512px-Royal_Caribbean_logo_%282024%29.svg.png" alt="Royal Caribbean Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-blue-800">7-Night Caribbean Getaway - 25% Off!</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Royal Caribbean</p>
+                                <p class="text-gray-600">Sail to paradise with special rates on select Oasis of the Seas sailings. Includes onboard credits!</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-blue-600">$899</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: Princess -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-green-600">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Princess_Cruises_logo.svg/2560px-Princess_Cruises_logo.svg.png" alt="Princess Cruises Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-green-800">Alaskan Adventure with Free Excursions</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Princess Cruises</p>
+                                <p class="text-gray-600">Book a balcony stateroom or higher and receive a complimentary shore excursion credit!</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-green-600">$1,450</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: Norwegian -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-purple-600">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo_Norwegian_Cruise_Line.jpg" alt="Norwegian Cruise Line Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-purple-800">Mediterranean Dream - Kids Sail Free</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Norwegian Cruise Line</p>
+                                <p class="text-gray-600">The perfect family vacation! Explore Rome, Athens, and more. Offer valid on select summer sailings.</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-purple-600">$1,199</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: Virgin Voyages -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-red-500">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://www.cruisingjournal.com/wp-content/uploads/2019/10/Virgin_Voyages.png" alt="Virgin Voyages Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-red-700">Adults-Only Caribbean Bliss</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Virgin Voyages</p>
+                                <p class="text-gray-600">Experience a new way to sail with all food, tips, and WiFi included. Plus, get a $300 bar tab on me!</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right space-y-2">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-red-600">$1,600</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                                <a href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=215467&agencyId=44133&bookingChannel=FMLINK" target="_blank" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-300 text-center w-full">Browse Sailings & Book</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: Carnival -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-cyan-500">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Carnival_Cruise_Line_Logo.svg/2880px-Carnival_Cruise_Line_Logo.svg.png" alt="Carnival Cruise Line Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-cyan-800">Fun-Filled Baja Mexico Cruise</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Carnival</p>
+                                <p class="text-gray-600">A perfect short getaway! Grab a 4-day cruise to Mexico with rates you won't believe. Great for groups!</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-cyan-600">$450</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: Celebrity -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-gray-700">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Celebrity-Cruises-Logo.svg/2880px-Celebrity-Cruises-Logo.svg.png" alt="Celebrity Cruises Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-gray-800">Modern Luxury in Greece</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> Celebrity Cruises</p>
+                                <p class="text-gray-600">Drinks, WiFi, and tips are always included. Sail the Greek Isles on a stunning Edge-series ship.</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-gray-700">$1,850</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deal Card: MSC -->
+                    <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-yellow-500">
+                        <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/House_Flag_of_MSC_Cruises.svg/2560px-House_Flag_of_MSC_Cruises.svg.png" alt="MSC Cruises Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
+                            <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
+                                <h3 class="text-2xl font-bold text-yellow-800">European Style, Caribbean Sun</h3>
+                                <p class="text-gray-600 mb-2"><span class="font-semibold">Cruise Line:</span> MSC Cruises</p>
+                                <p class="text-gray-600">Discover MSC's private island, Ocean Cay. Unbeatable value for a 7-night Caribbean cruise.</p>
+                            </div>
+                            <div class="w-full lg:w-1/3 text-left lg:text-right">
+                                <p class="text-lg font-semibold text-gray-800">From <span class="text-yellow-600">$799</span>/person</p>
+                                <button onclick="navigateTo('contact')" class="mt-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Contact Page -->
