@@ -1,0 +1,15 @@
+{
+  "name": "cruisesbyalan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "cruisesbyalan.com static website",
+  "scripts": {
+    "test": "vitest --run"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "fast-check": "^3.23.0",
+    "tailwindcss": "^3.4.19",
+    "vitest": "^3.2.1"
+  }
+}

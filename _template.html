@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags (unique per page) -->
+    <title><!-- PAGE TITLE --> | Alan Lekah - Cruise Expert</title>
+    <meta name="description" content="<!-- PAGE DESCRIPTION (120-160 characters) -->">
+    <link rel="canonical" href="https://cruisesbyalan.com/<!-- PAGE FILENAME -->">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="<!-- PAGE TITLE --> | Alan Lekah - Cruise Expert">
+    <meta property="og:description" content="<!-- PAGE DESCRIPTION -->">
+    <meta property="og:image" content="https://cruisesbyalan.com/images/<!-- PAGE OG IMAGE -->">
+    <meta property="og:url" content="https://cruisesbyalan.com/<!-- PAGE FILENAME -->">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data (page-specific, include only where needed) -->
+    <!--
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        ...
+    }
+    </script>
+    -->
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ============================================
+     HEADER - Sticky Navigation
+     Present on ALL pages, identical markup
+     ============================================ -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main navigation">
+        <a href="index.html" class="text-2xl font-bold text-blue-800">
+            Alan Lekah <span class="text-gray-500 font-normal text-lg hidden sm:inline">| Cruise Expert</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="destinations.html" class="nav-link">Destinations</a>
+            <a href="deals.html" class="nav-link">Shore Excursions</a>
+            <a href="cruise-lines.html" class="nav-link">Cruise Lines</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition duration-300 hidden md:inline-block">Get Your Free Quote</a>
+        </div>
+
+        <!-- Mobile: Tap-to-Call CTA + Menu Toggle -->
+        <div class="flex items-center space-x-3 md:hidden">
+            <a href="tel:630-561-0344" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm" aria-label="Call 630-561-0344">
+                <i class="fas fa-phone" aria-hidden="true"></i> Call
+            </a>
+            <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="block py-3 px-6 text-sm nav-link">Home</a>
+        <a href="about.html" class="block py-3 px-6 text-sm nav-link">About Me</a>
+        <a href="destinations.html" class="block py-3 px-6 text-sm nav-link">Destinations</a>
+        <a href="deals.html" class="block py-3 px-6 text-sm nav-link">Shore Excursions</a>
+        <a href="cruise-lines.html" class="block py-3 px-6 text-sm nav-link">Cruise Lines</a>
+        <a href="blog.html" class="block py-3 px-6 text-sm nav-link">Blog</a>
+        <a href="contact.html" class="block py-3 px-6 text-sm nav-link">Contact</a>
+    </div>
+</header>
+
+<!-- ============================================
+     BREADCRUMB NAVIGATION
+     Present on ALL pages EXCEPT index.html (Home)
+     Remove this entire <nav> block on the Home page
+     ============================================ -->
+<nav aria-label="Breadcrumb" class="container mx-auto px-6 py-3">
+    <ol class="flex items-center space-x-2 text-sm text-gray-500">
+        <li><a href="index.html" class="hover:text-blue-600 transition duration-300">Home</a></li>
+        <li aria-hidden="true"><i class="fas fa-chevron-right text-xs" aria-hidden="true"></i></li>
+        <li><span class="text-gray-800 font-medium" aria-current="page"><!-- CURRENT PAGE NAME --></span></li>
+    </ol>
+</nav>
+
+<!-- ============================================
+     MAIN CONTENT
+     Page-specific content goes between the markers
+     ============================================ -->
+<main>
+    <!-- PAGE CONTENT START -->
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <!-- Page-specific content here -->
+        </div>
+    </section>
+
+    <!-- PAGE CONTENT END -->
+</main>
+
+<!-- ============================================
+     FOOTER
+     Present on ALL pages, identical markup
+     ============================================ -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <!-- Column 1: Brand & Agency Info -->
+            <div>
+                <p class="text-2xl font-bold mb-2">Alan Lekah</p>
+                <p class="text-gray-400 mb-1">Your Personal Cruise Expert</p>
+                <p class="text-gray-400 text-sm">Agency: DJ Travels Global (Global Exception LLC)</p>
+            </div>
+
+            <!-- Column 2: Email Signup Form (Lead Capture) -->
+            <div>
+                <p class="text-lg font-semibold mb-3">Get Cruise Deals &amp; Tips</p>
+                <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-2">
+                    <input type="hidden" name="_subject" value="New Email Subscriber">
+                    <input type="hidden" name="_captcha" value="false">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required class="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Column 3: Social Links -->
+            <div class="text-center md:text-right">
+                <p class="text-lg font-semibold mb-3">Follow Along</p>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="https://instagram.com/cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on Instagram">
+                        <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on TikTok">
+                        <i class="fab fa-tiktok fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 DJ Travels Global. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+
+<!-- Google Analytics 4 (replace G-XXXXXXXXXX with your measurement ID) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Mobile Menu Toggle -->
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        menu.classList.toggle('hidden');
+        this.setAttribute('aria-expanded', !expanded);
+    });
+</script>
+
+</body>
+</html>

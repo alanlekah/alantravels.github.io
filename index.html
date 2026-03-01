@@ -3,550 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Lekah - Your Personal Cruise Expert</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Cruise Vacations &amp; Expert Planning | Alan Lekah - Cruise Expert</title>
+    <meta name="description" content="Plan your perfect cruise vacation with Alan Lekah. Get free expert advice, personalized planning, exclusive deals, and insider perks on all major cruise lines.">
+    <link rel="canonical" href="https://cruisesbyalan.com/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Cruise Vacations &amp; Expert Planning | Alan Lekah - Cruise Expert">
+    <meta property="og:description" content="Plan your perfect cruise vacation with Alan Lekah. Get free expert advice, personalized planning, exclusive deals, and insider perks on all major cruise lines.">
+    <meta property="og:image" content="https://cruisesbyalan.com/images/og-home.jpg">
+    <meta property="og:url" content="https://cruisesbyalan.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* --- Hero Slideshow Styles --- */
-        #hero-slideshow {
-            position: relative;
-            height: 60vh; /* Adjust height as needed */
-            min-height: 400px;
-            color: white;
-        }
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            z-index: 1;
-        }
-        .hero-slide.active {
-            opacity: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-            height: 100%;
-        }
 
-        /* --- Testimonial Carousel Styles --- */
-        .testimonial-slide {
-            display: none;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .testimonial-slide.active {
-            display: block;
-        }
-        .testimonial-dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .testimonial-dot.active, .testimonial-dot:hover {
-            background-color: #717171;
-        }
+    <!-- JSON-LD: TravelAgency -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Alan Lekah - Cruise Expert",
+        "url": "https://cruisesbyalan.com",
+        "telephone": "630-561-0344",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "addressCountry": "US"
+        },
+        "sameAs": [
+            "https://instagram.com/cruisesbyalan",
+            "https://www.tiktok.com/@cruisesbyalan"
+        ]
+    }
+    </script>
 
-        /* --- General Styles --- */
-        .cta-bg {
-            background-image: linear-gradient(rgba(0, 41, 82, 0.8), rgba(0, 41, 82, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723a996f6ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .page { display: none; }
-        .page.active { display: block; }
-        .nav-link {
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #3b82f6;
-        }
-    </style>
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does booking with a cruise travel agent work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It's simple! Tell me about your dream vacation — dates, budget, destinations, and preferences. I'll research the best options, present you with personalized recommendations, and handle all the booking details. You get expert guidance from start to finish, completely free."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is your service really free? How do you get paid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, my service is 100% free to you! I earn a commission directly from the cruise lines when you book. The price you pay is the same (or often better) than booking directly, but you get my expertise and personalized service at no extra cost."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which cruise lines do you work with?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I work with all major cruise lines including Royal Caribbean, Celebrity Cruises, Norwegian Cruise Line, Carnival, Princess Cruises, MSC Cruises, Virgin Voyages, and many more. Whatever your style or budget, I can find the perfect match."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I've never been on a cruise before. Is it right for me?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Cruises are perfect for first-timers because almost everything is included — dining, entertainment, accommodation, and transportation between destinations. I specialize in helping first-time cruisers find the ideal ship and itinerary for their interests."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you help me book shore excursions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! I can help you find amazing shore excursions through trusted partners like Viator, often at better prices than booking through the cruise line directly. From snorkeling in the Caribbean to wine tasting in the Mediterranean, I'll help you make the most of every port."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's included in a typical cruise fare?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most cruise fares include your stateroom, all meals at main dining venues and buffets, entertainment shows, pool and fitness center access, and kids' clubs. Extras like specialty dining, spa treatments, shore excursions, and drink packages are additional but I can help you find the best deals on those too."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is your cancellation policy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cancellation policies vary by cruise line and fare type. Many cruise lines offer flexible cancellation up to a certain number of days before sailing. I always explain the specific cancellation terms before you book, and I can help you choose options with the most flexibility if that's important to you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you help with group cruises or special events?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Group cruises are one of my specialties. Whether it's a family reunion, wedding, corporate retreat, or friends getaway, I can coordinate group bookings with special rates, private events, and dedicated group amenities. Groups of 8 or more staterooms often qualify for extra perks."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- Header & Navigation -->
+<!-- HEADER - Sticky Navigation -->
 <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-blue-800" onclick="navigateTo('home')">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main navigation">
+        <a href="index.html" class="text-2xl font-bold text-blue-800">
             Alan Lekah <span class="text-gray-500 font-normal text-lg hidden sm:inline">| Cruise Expert</span>
         </a>
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-6">
-            <a class="nav-link" onclick="navigateTo('home')">Home</a>
-            <a class="nav-link" onclick="navigateTo('about')">About Me</a>
-            <a class="nav-link" onclick="navigateTo('destinations')">Destinations</a>
-            <a class="nav-link" onclick="navigateTo('deals')">Special Deals</a>
-            <a class="nav-link" onclick="navigateTo('contact')">Contact</a>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="destinations.html" class="nav-link">Destinations</a>
+            <a href="deals.html" class="nav-link">Shore Excursions</a>
+            <a href="cruise-lines.html" class="nav-link">Cruise Lines</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition duration-300 hidden md:inline-block">Get Your Free Quote</a>
         </div>
-        <div class="md:hidden flex items-center">
-            <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                <i class="fas fa-bars fa-lg"></i>
+        <!-- Mobile: Tap-to-Call CTA + Menu Toggle -->
+        <div class="flex items-center space-x-3 md:hidden">
+            <a href="tel:630-561-0344" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm" aria-label="Call 630-561-0344">
+                <i class="fas fa-phone" aria-hidden="true"></i> Call
+            </a>
+            <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-        <a class="block py-3 px-6 text-sm nav-link" onclick="navigateTo('home')">Home</a>
-        <a class="block py-3 px-6 text-sm nav-link" onclick="navigateTo('about')">About Me</a>
-        <a class="block py-3 px-6 text-sm nav-link" onclick="navigateTo('destinations')">Destinations</a>
-        <a class="block py-3 px-6 text-sm nav-link" onclick="navigateTo('deals')">Special Deals</a>
-        <a class="block py-3 px-6 text-sm nav-link" onclick="navigateTo('contact')">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="block py-3 px-6 text-sm nav-link">Home</a>
+        <a href="about.html" class="block py-3 px-6 text-sm nav-link">About Me</a>
+        <a href="destinations.html" class="block py-3 px-6 text-sm nav-link">Destinations</a>
+        <a href="deals.html" class="block py-3 px-6 text-sm nav-link">Shore Excursions</a>
+        <a href="cruise-lines.html" class="block py-3 px-6 text-sm nav-link">Cruise Lines</a>
+        <a href="blog.html" class="block py-3 px-6 text-sm nav-link">Blog</a>
+        <a href="contact.html" class="block py-3 px-6 text-sm nav-link">Contact</a>
     </div>
 </header>
 
+<!-- No breadcrumbs on Home page -->
+
 <main>
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <!-- Hero Section with Slideshow -->
-        <section id="hero-slideshow">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1585955353676-02a7e5a7bff1?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1526402935402-6659f6844efc?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOjHsGU_vUA4tBU795n9a80hn8GOh0RHChn6ix3_PVPVBkzXKs7J0h_eyUXyJSraA47T5tCE6bAZPbhqM88SDMjX3UOc44D2jiwh9sH5wuz7u4rOc7STAva0F_Utg3pa7WzZANhFltFnyVT--2akRo2dw=w2016-h1134-s-no-gm?authuser=0?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="hero-content flex items-center justify-center h-full">
-                <div class="container mx-auto px-6 text-center">
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Let Me Plan Your Perfect Cruise Vacation</h1>
-                    <p class="text-lg md:text-xl mb-8">Get expert advice, personalized planning, and exclusive deals—all at no extra cost to you.</p>
-                    <button onclick="navigateTo('contact')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                        Get Your Free Quote
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Book With Me Section -->
-        <section class="py-20 bg-white">
+    <!-- Hero Section with Slideshow -->
+    <section id="hero-slideshow">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1585955353676-02a7e5a7bff1?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1520454974749-611b7248ffdb?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1526402935402-6659f6844efc?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOjHsGU_vUA4tBU795n9a80hn8GOh0RHChn6ix3_PVPVBkzXKs7J0h_eyUXyJSraA47T5tCE6bAZPbhqM88SDMjX3UOc44D2jiwh9sH5wuz7u4rOc7STAva0F_Utg3pa7WzZANhFltFnyVT--2akRo2dw=w2016-h1134-s-no-gm');"></div>
+        <div class="hero-content flex items-center justify-center h-full">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">The Alan Lekah Advantage</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto mb-12">I'm more than a travel agent; I'm your personal cruise concierge. I handle all the details so you can focus on the fun.</p>
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div class="p-6">
-                        <i class="fas fa-gift fa-3x text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">My Service is 100% FREE</h3>
-                        <p class="text-gray-600">You get all my expertise and personalized planning for free. My commission is paid by the cruise lines, so you never pay extra for my service. It's already built into the price!</p>
-                    </div>
-                    <div class="p-6">
-                        <i class="fas fa-concierge-bell fa-3x text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Personalized Planning</h3>
-                        <p class="text-gray-600">I listen to what you want from a vacation and custom-tailor the perfect cruise experience just for you, from stateroom selection to shore excursions.</p>
-                    </div>
-                    <div class="p-6">
-                        <i class="fas fa-tags fa-3x text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">Expertise & Exclusive Deals</h3>
-                        <p class="text-gray-600">With insider knowledge and direct partnerships, I find the best value and unlock exclusive perks and amenities you can't get on your own.</p>
-                    </div>
-                </div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Let Me Plan Your Perfect Cruise Vacation</h1>
+                <p class="text-lg md:text-xl mb-8">Get expert advice, personalized planning, and exclusive deals—all at no extra cost to you.</p>
+                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">Get Your Free Quote</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Destinations Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Where Will Your Journey Take You?</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1544550581-1bcabf842b77?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Caribbean" class="w-full h-48 object-cover">
-                        <div class="p-6"><h3 class="text-2xl font-semibold mb-2">The Caribbean</h3><p class="text-gray-600 mb-4">Turquoise waters, white-sand beaches, and vibrant cultures await.</p><a href="#" onclick="navigateTo('destinations')" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a></div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1657682942826-efc31a3df8cb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Alaska" class="w-full h-48 object-cover">
-                        <div class="p-6"><h3 class="text-2xl font-semibold mb-2">Alaska</h3><p class="text-gray-600 mb-4">Witness majestic glaciers, stunning fjords, and abundant wildlife.</p><a href="#" onclick="navigateTo('destinations')" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a></div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=766&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mediterranean" class="w-full h-48 object-cover">
-                        <div class="p-6"><h3 class="text-2xl font-semibold mb-2">The Mediterranean</h3><p class="text-gray-600 mb-4">Discover ancient history, breathtaking coastlines, and culinary delights.</p><a href="#" onclick="navigateTo('destinations')" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a></div>
-                    </div>
+    <!-- Why Book With Me Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">The Alan Lekah Advantage</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-12">I'm more than a travel agent; I'm your personal cruise concierge. I handle all the details so you can focus on the fun.</p>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-6">
+                    <i class="fas fa-gift fa-3x text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">My Service is 100% FREE</h3>
+                    <p class="text-gray-600">You get all my expertise and personalized planning for free. My commission is paid by the cruise lines, so you never pay extra for my service.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">What My Clients Are Saying</h2>
-                <div id="testimonial-carousel" class="relative max-w-3xl mx-auto">
-                    <!-- Testimonial Slides -->
-                    <div class="testimonial-slide active">
-                        <p class="text-lg text-gray-600 italic mb-4">"Alan made planning our anniversary cruise an absolute breeze! He found us the perfect itinerary and handled every single detail. We felt so taken care of. We'll never book a cruise without him again!"</p>
-                        <p class="font-semibold text-gray-800">- Sarah & Tom P.</p>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="text-lg text-gray-600 italic mb-4">"You are the best! I'm glad I met you!"</p>
-                        <p class="font-semibold text-gray-800">- Teresa V.</p>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="text-lg text-gray-600 italic mb-4">"Thank you for actually doing everything you said you would... You're the only person I will be referring anyone to. You crush everyone's so called "best" deals!"</p>
-                        <p class="font-semibold text-gray-800">- Jeffrey B.</p>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="text-lg text-gray-600 italic mb-4">"As a first-time cruiser, I was completely overwhelmed. Alan was patient, answered all my questions, and found a cruise that was perfect for my budget and interests. The best part? His service was completely free!"</p>
-                        <p class="font-semibold text-gray-800">- Michael B.</p>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="text-lg text-gray-600 italic mb-4">"I've been on dozens of cruises, but the perks and onboard credits Alan got us were a first! His knowledge is top-notch, and he genuinely cares about making your vacation special. Highly recommend!"</p>
-                        <p class="font-semibold text-gray-800">- Jennifer L.</p>
-                    </div>
+                <div class="p-6">
+                    <i class="fas fa-concierge-bell fa-3x text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">Personalized Planning</h3>
+                    <p class="text-gray-600">I listen to what you want from a vacation and custom-tailor the perfect cruise experience just for you, from stateroom selection to shore excursions.</p>
                 </div>
-                <!-- Dots -->
-                <div id="testimonial-dots" class="text-center mt-8"></div>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="cta-bg py-20 text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4">Ready to Set Sail?</h2>
-                <p class="text-lg mb-8">Let's plan your unforgettable cruise vacation. Contact me today for a free, no-obligation consultation.</p>
-                <button onclick="navigateTo('contact')" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                    Contact Alan
-                </button>
-            </div>
-        </section>
-    </div>
-
-    <!-- About Me Page -->
-    <div id="about" class="page bg-white py-20">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPmTagAcwIQJjoKF0NFUL16AxVvblDhBAGxZAEPrKjFZ0W8Aw4lQeATIGh5g6FbVzIZ__AWjd8hqKPY1-feMsvyBsZsX604GZkmvI0GZK_eI_snXMbPWkyDt1tvY9XGsw7l1cBMvyc43C8EHVGdGInwmA=w2408-h1806-s-no-gm?authuser=0" alt="Alan Lekah, Cruise Specialist" class="rounded-lg shadow-xl w-full">
-                </div>
-                <div class="w-full md:w-1/2 px-4">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Your Cruise Expert, Alan Lekah</h2>
-                    <p class="text-gray-600 mb-4 text-lg">Hello! I'm Alan Lekah, co-founder of DJ Travels Global and your personal travel curator. My passion for travel and the open sea inspired me to create an agency that goes beyond just booking trips. I believe a cruise vacation is an experience to be savored, and my mission is to make that experience perfect for you.</p>
-                    <p class="text-gray-600 mb-4">With years of experience and a deep love for exploring the world, I've built strong relationships with the world's best cruise lines. This allows me to offer you unparalleled value and insider access, all at no extra cost to you. At my agency, DJ Travels Global (a proud part of Global Exception LLC), I'm committed to providing exceptional, one-on-one service.</p>
-                    <p class="text-gray-600">Whether you're a seasoned sailor or a first-time cruiser, I'm here to guide you every step of the way. Let's turn your travel dreams into reality!</p>
+                <div class="p-6">
+                    <i class="fas fa-tags fa-3x text-blue-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">Expertise &amp; Exclusive Deals</h3>
+                    <p class="text-gray-600">With insider knowledge and direct partnerships, I find the best value and unlock exclusive perks and amenities you can't get on your own.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Destinations Page -->
-    <div id="destinations" class="page py-20">
+    <!-- Featured Destinations Section -->
+    <section class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Explore Popular Destinations</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1589786161184-6d43d20526e2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Caribbean" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Caribbean & Bahamas</h3><p class="text-gray-600">Perfect for sun-seekers and adventurers alike. From snorkeling in crystal-clear waters to exploring historic ports, the options are endless.</p></div></div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1456410143611-49b35e0611b4?q=80&w=2352&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Alaska" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Alaska's Glaciers</h3><p class="text-gray-600">A journey to the Last Frontier offers breathtaking views of glaciers, mountains, and wildlife like whales and eagles.</p></div></div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1606816493585-22a8486501cb?q=80&w=2352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Mediterranean" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Mediterranean Wonders</h3><p class="text-gray-600">Immerse yourself in the art, history, and culture of legendary cities in Italy, Greece, Spain, and more.</p></div></div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1545251142-f32339076e6d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Hawaii" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Hawaiian Islands</h3><p class="text-gray-600">Experience the Aloha spirit as you sail between volcanic islands, lush rainforests, and world-famous beaches.</p></div></div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1708549394486-fbc15f6e842c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Mexican Riviera" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Mexican Riviera</h3><p class="text-gray-600">Enjoy festive atmospheres, beautiful beaches, and exciting water sports in Cabo, Mazatlán, and Puerto Vallarta.</p></div></div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1712337646481-4a367b59fcbb?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Northern Europe" class="w-full h-48 object-cover"><div class="p-6"><h3 class="text-2xl font-semibold mb-2">Northern Europe</h3><p class="text-gray-600">Explore the historic capitals of the Baltics, the dramatic fjords of Norway, and the charming cities of Scandinavia.</p></div></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Deals Page -->
-    <div id="deals" class="page py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Exclusive Offers & Special Deals</h2>
-            <div class="space-y-8">
-                <!-- Deal Card: Virgin Voyages -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-red-500">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://www.cruisingjournal.com/wp-content/uploads/2019/10/Virgin_Voyages.png" alt="Virgin Voyages Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-red-700">Virgin Voyages</h3>
-                            <p class="text-gray-600">Get up to $600 in onboard credit for a limited time, plus $300 off your voyage when you book with me on select 2025 sailings!</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right space-y-2">
-                            <button onclick="navigateTo('contact')" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                            <a href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=215467&agencyId=44133&bookingChannel=FMLINK" target="_blank" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-300 text-center w-full">Browse Sailings & Book</a>
-                        </div>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Where Will Your Journey Take You?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1589786161184-6d43d20526e2?q=80&w=600&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1589786161184-6d43d20526e2?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1589786161184-6d43d20526e2?q=80&w=600&auto=format&fit=crop 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Turquoise Caribbean waters with white sand beach" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">The Caribbean</h3>
+                        <p class="text-gray-600 mb-4">Turquoise waters, white-sand beaches, and vibrant cultures await.</p>
+                        <a href="destinations.html" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a>
                     </div>
                 </div>
-                <!-- Deal Card: Celebrity -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-gray-700">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Celebrity-Cruises-Logo.svg/2880px-Celebrity-Cruises-Logo.svg.png" alt="Celebrity Cruises Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-gray-800">Celebrity Cruises</h3>
-                            <p class="text-gray-600">Let me get you at least $50 of onboard credit for your next modern luxury sailing!</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1657682942826-efc31a3df8cb?q=80&w=600&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1657682942826-efc31a3df8cb?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1657682942826-efc31a3df8cb?q=80&w=600&auto=format&fit=crop 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Alaskan glacier with snow-capped mountains" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Alaska</h3>
+                        <p class="text-gray-600 mb-4">Witness majestic glaciers, stunning fjords, and abundant wildlife.</p>
+                        <a href="destinations.html" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a>
                     </div>
                 </div>
-                <!-- Deal Card: MSC -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-yellow-500">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/MSC_Cruises_Logo.png" alt="MSC Cruises Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-yellow-800">MSC Cruises</h3>
-                            <p class="text-gray-600">Through my partnership, I can help you get special benefits and access to exclusive pricing you won't find anywhere else.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Deal Card: Royal Caribbean -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-blue-600">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Royal_Caribbean_logo_%282024%29.svg/512px-Royal_Caribbean_logo_%282024%29.svg.png" alt="Royal Caribbean Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-blue-800">Royal Caribbean</h3>
-                            <p class="text-gray-600">As a top partner, I can secure at least $50 in onboard credit for most voyages on the world's most innovative ships.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Deal Card: Norwegian -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-purple-600">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo_Norwegian_Cruise_Line.jpg" alt="Norwegian Cruise Line Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-purple-800">Norwegian Cruise Line</h3>
-                            <p class="text-gray-600">I'll help you navigate their "More at Sea" promotion to ensure you get the absolute best value, plus free onboard credit from me.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Deal Card: Princess -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-green-600">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://mma.prnewswire.com/media/2326046/Princess_Logo.jpg?p=publish" alt="Princess Cruises Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-green-800">Princess Cruises</h3>
-                            <p class="text-gray-600">Booking with me gets you access to special promotions, including complimentary shore excursion credits on many sailings.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Deal Card: Carnival -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-cyan-500">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Carnival_Cruise_Line_Logo.svg/2880px-Carnival_Cruise_Line_Logo.svg.png" alt="Carnival Cruise Line Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-cyan-800">Carnival Cruise Line</h3>
-                            <p class="text-gray-600">Let me find you the best value for your fun-filled vacation, with exclusive access to group rates and special perks.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <button onclick="navigateTo('contact')" class="mt-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full">Ask Alan About This Deal</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Deal Card: Viator -->
-                <div class="bg-gray-50 rounded-lg shadow-md flex flex-wrap md:flex-nowrap items-center overflow-hidden border-l-4 border-green-600">
-                    <div class="w-full md:w-1/4 h-48 md:h-full bg-white flex items-center justify-center p-4">
-                        <img src="https://www.breakingtravelnews.com/images/sized/images/uploads/logos/viator-new-1000px-700x177.png" alt="Viator Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="w-full md:w-3/4 p-6 flex flex-wrap items-center">
-                        <div class="w-full lg:w-2/3 mb-4 lg:mb-0">
-                            <h3 class="text-2xl font-bold text-green-800">Viator Shore Excursions</h3>
-                            <p class="text-gray-600">Don't overpay for cruise line excursions. I can help you book incredible, unique tours and activities in every port through Viator, often at a better price and with more options.</p>
-                        </div>
-                        <div class="w-full lg:w-1/3 text-left lg:text-right">
-                            <a href="https://www.viator.com/?pid=P00166026&uid=U00665124&mcid=58086&currency=USD" target="_blank" class="mt-2 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 w-full text-center">Find Your Perfect Excursion</a>
-                        </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=400&auto=format&fit=crop 400w, https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&auto=format&fit=crop 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Venice canal with historic buildings in the Mediterranean" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">The Mediterranean</h3>
+                        <p class="text-gray-600 mb-4">Discover ancient history, breathtaking coastlines, and culinary delights.</p>
+                        <a href="destinations.html" class="text-blue-600 font-semibold hover:underline">Explore More &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Contact Page -->
-    <div id="contact" class="page py-20">
+    <!-- Reviews / Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">What My Clients Are Saying</h2>
+            <div id="testimonial-carousel" class="relative max-w-3xl mx-auto">
+                <div class="testimonial-slide active">
+                    <p class="text-lg text-gray-600 italic mb-4">"Alan made planning our anniversary cruise an absolute breeze! He found us the perfect itinerary and handled every single detail. We felt so taken care of. We'll never book a cruise without him again!"</p>
+                    <p class="font-semibold text-gray-800">- Sarah &amp; Tom P.</p>
+                    <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-lg text-gray-600 italic mb-4">"You are the best! I'm glad I met you!"</p>
+                    <p class="font-semibold text-gray-800">- Teresa V.</p>
+                    <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-lg text-gray-600 italic mb-4">"Thank you for actually doing everything you said you would... You're the only person I will be referring anyone to. You crush everyone's so called 'best' deals!"</p>
+                    <p class="font-semibold text-gray-800">- Jeffrey B.</p>
+                    <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-lg text-gray-600 italic mb-4">"As a first-time cruiser, I was completely overwhelmed. Alan was patient, answered all my questions, and found a cruise that was perfect for my budget and interests. The best part? His service was completely free!"</p>
+                    <p class="font-semibold text-gray-800">- Michael B.</p>
+                    <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-lg text-gray-600 italic mb-4">"I've been on dozens of cruises, but the perks and onboard credits Alan got us were a first! His knowledge is top-notch, and he genuinely cares about making your vacation special. Highly recommend!"</p>
+                    <p class="font-semibold text-gray-800">- Jennifer L.</p>
+                    <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+                </div>
+            </div>
+            <div id="testimonial-dots" class="text-center mt-8"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-2">Let's Plan Your Cruise</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ready for a stress-free vacation? Fill out
-                the form for a free, no-obligation quote. I look forward to helping you!</p>
-            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto flex flex-wrap">
-                <div class="w-full md:w-1/2 md:pr-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Cruise Experiences</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Cruise ship deck with pool and ocean views at sunset" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Tropical beach with crystal clear water and white sand" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Aerial view of turquoise ocean water near tropical island" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Cruise ship sailing through Alaskan fjord with mountains" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Mediterranean coastal town with colorful buildings and harbor" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1559599746-8823b38544c6?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1559599746-8823b38544c6?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1559599746-8823b38544c6?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Sunset over the ocean from a cruise ship balcony" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Large cruise ship docked at a tropical port" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=400&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=300&auto=format&fit=crop 300w, https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=400&auto=format&fit=crop 400w" sizes="(max-width: 768px) 50vw, 25vw" alt="Beautiful Greek island with white buildings and blue domes" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Frequently Asked Questions</h2>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    How does booking with a cruise travel agent work?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>It's simple! Tell me about your dream vacation — dates, budget, destinations, and preferences. I'll research the best options, present you with personalized recommendations, and handle all the booking details. You get expert guidance from start to finish, completely free.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    Is your service really free? How do you get paid?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Yes, my service is 100% free to you! I earn a commission directly from the cruise lines when you book. The price you pay is the same (or often better) than booking directly, but you get my expertise and personalized service at no extra cost.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    Which cruise lines do you work with?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>I work with all major cruise lines including Royal Caribbean, Celebrity Cruises, Norwegian Cruise Line, Carnival, Princess Cruises, MSC Cruises, Virgin Voyages, and many more. Whatever your style or budget, I can find the perfect match.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    I've never been on a cruise before. Is it right for me?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Absolutely! Cruises are perfect for first-timers because almost everything is included — dining, entertainment, accommodation, and transportation between destinations. I specialize in helping first-time cruisers find the ideal ship and itinerary for their interests.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    Can you help me book shore excursions?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Yes! I can help you find amazing shore excursions through trusted partners like Viator, often at better prices than booking through the cruise line directly. From snorkeling in the Caribbean to wine tasting in the Mediterranean, I'll help you make the most of every port.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    What's included in a typical cruise fare?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Most cruise fares include your stateroom, all meals at main dining venues and buffets, entertainment shows, pool and fitness center access, and kids' clubs. Extras like specialty dining, spa treatments, shore excursions, and drink packages are additional but I can help you find the best deals on those too.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    What is your cancellation policy?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Cancellation policies vary by cruise line and fare type. Many cruise lines offer flexible cancellation up to a certain number of days before sailing. I always explain the specific cancellation terms before you book, and I can help you choose options with the most flexibility if that's important to you.</p></div>
+            </details>
+            <details class="mb-4 border border-gray-200 rounded-lg">
+                <summary class="flex justify-between items-center p-5 bg-gray-50 rounded-lg font-semibold text-gray-800 hover:bg-gray-100 transition duration-300">
+                    Can you help with group cruises or special events?
+                    <i class="fas fa-chevron-down accordion-icon text-gray-500" aria-hidden="true"></i>
+                </summary>
+                <div class="p-5 text-gray-600"><p>Absolutely! Group cruises are one of my specialties. Whether it's a family reunion, wedding, corporate retreat, or friends getaway, I can coordinate group bookings with special rates, private events, and dedicated group amenities. Groups of 8 or more staterooms often qualify for extra perks.</p></div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section - Cruise Planning Checklist (Task 3.5) -->
+    <section id="lead-magnet" class="py-16 bg-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden md:flex">
+                <!-- Left: Info Panel (teal/green theme - visually distinct from blue forms) -->
+                <div class="bg-teal-600 text-white p-8 md:w-1/2 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <i class="fas fa-clipboard-list fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3">Free Cruise Planning Checklist</h2>
+                    <p class="mb-4 text-teal-100">Download our comprehensive checklist to make sure you don't miss a thing when planning your next cruise vacation.</p>
+                    <ul class="space-y-2 text-sm text-teal-100">
+                        <li><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Packing essentials for every destination</li>
+                        <li><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Pre-boarding preparation timeline</li>
+                        <li><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Budget planning tips and tricks</li>
+                        <li><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Shore excursion planning guide</li>
+                    </ul>
+                </div>
+                <!-- Right: Form -->
+                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Get Your Free PDF</h3>
+                    <p class="text-gray-600 text-sm mb-6">Enter your details below and we'll send you the checklist right away.</p>
                     <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST">
-                        <div class="mb-4"><label for="name" class="block text-gray-700 font-semibold mb-2">Full
-                            Name</label><input type="text" id="name" name="name"
-                                               class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                               required></div>
-                        <div class="mb-4"><label for="email" class="block text-gray-700 font-semibold mb-2">Email
-                            Address</label><input type="email" id="email" name="email"
-                                                  class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                                  required></div>
-                        <div class="mb-4"><label for="phone" class="block text-gray-700 font-semibold mb-2">Phone
-                            Number</label><input type="tel" id="phone" name="phone"
-                                                 class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="hidden" name="_subject" value="New Lead Magnet Download Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://cruisesbyalan.com/assets/cruise-planning-checklist.pdf">
+                        <div class="mb-4">
+                            <label for="lead-magnet-name" class="block text-gray-700 font-semibold mb-1 text-sm">Your Name</label>
+                            <input type="text" id="lead-magnet-name" name="name" placeholder="First and last name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                         </div>
-                        <div class="mb-4"><label for="message" class="block text-gray-700 font-semibold mb-2">Tell
-                            Me About Your Dream Trip</label><textarea id="message" name="message" rows="5"
-                                                                      class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                                                      placeholder="e.g., 'I'm interested in a Caribbean cruise for 2 adults in December.'"></textarea>
-                        </div><button type="submit"
-                                      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send
-                        to Alan</button>
+                        <div class="mb-4">
+                            <label for="lead-magnet-email" class="block text-gray-700 font-semibold mb-1 text-sm">Email Address</label>
+                            <input type="email" id="lead-magnet-email" name="email" placeholder="you@example.com" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-file-pdf mr-2" aria-hidden="true"></i> Download Free Checklist
+                        </button>
                     </form>
                 </div>
-                <div
-                        class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8 border-t md:border-t-0 md:border-l border-gray-200 pt-8 md:pt-0">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
-                    <div class="space-y-4 text-gray-600">
-                        <p><i class="fas fa-user-tie w-6 text-blue-600"></i> Alan Lekah</p>
-                        <p><i class="fas fa-phone w-6 text-blue-600"></i> <a href="tel:630-561-0344"
-                                                                             class="hover:text-blue-600">630-561-0344</a></p>
-                        <p><i class="fas fa-envelope w-6 text-blue-600"></i> <a href="mailto:alekahtravel@gmail.com"
-                                                                                class="hover:text-blue-600">alekahtravel@gmail.com</a></p>
-                        <p><i class="fab fa-instagram w-6 text-blue-600"></i> <a
-                                href="https://instagram.com/cruisesbyalan" target="_blank"
-                                class="hover:text-blue-600">@cruisesbyalan</a></p>
-                        <p><i class="fab fa-tiktok w-6 text-blue-600"></i> <a
-                                href="https://www.tiktok.com/@cruisesbyalan" target="_blank"
-                                class="hover:text-blue-600">@cruisesbyalan</a></p>
-                        <p><i class="fas fa-briefcase w-6 text-blue-600"></i> Agency: DJ Travels Global (Global
-                            Exception LLC)</p>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup CTA Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Never Miss a Cruise Deal</h2>
+            <p class="text-gray-600 mb-8">Sign up for my newsletter and get the latest cruise deals, tips, and destination guides delivered straight to your inbox.</p>
+            <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3 justify-center">
+                <input type="hidden" name="_subject" value="New Email Subscriber - Homepage">
+                <input type="hidden" name="_captcha" value="false">
+                <label for="cta-email" class="sr-only">Email address</label>
+                <input type="email" id="cta-email" name="email" placeholder="Your email address" required class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-bg py-20 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Set Sail?</h2>
+            <p class="text-lg mb-8">Let's plan your unforgettable cruise vacation. Contact me today for a free, no-obligation consultation.</p>
+            <a href="contact.html" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">Contact Alan</a>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <p class="text-2xl font-bold mb-2">Alan Lekah</p>
+                <p class="text-gray-400 mb-1">Your Personal Cruise Expert</p>
+                <p class="text-gray-400 text-sm">Agency: DJ Travels Global (Global Exception LLC)</p>
+            </div>
+            <div>
+                <p class="text-lg font-semibold mb-3">Get Cruise Deals &amp; Tips</p>
+                <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-2">
+                    <input type="hidden" name="_subject" value="New Email Subscriber">
+                    <input type="hidden" name="_captcha" value="false">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required class="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Subscribe</button>
+                </form>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-lg font-semibold mb-3">Follow Along</p>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="https://instagram.com/cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on Instagram">
+                        <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on TikTok">
+                        <i class="fab fa-tiktok fa-2x" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-12">
-    <div class="container mx-auto px-6 text-center">
-        <p class="text-2xl font-bold mb-2">Alan Lekah | Your Personal Cruise Expert</p>
-        <p class="mb-4">Agency: DJ Travels Global (Global Exception LLC)</p>
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://instagram.com/aleakonaboat" target="_blank" class="hover:text-blue-400 transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://www.tiktok.com/@cruisesbyalan" target="_blank" class="hover:text-blue-400 transition duration-300"><i class="fab fa-tiktok fa-2x"></i></a>
+        <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 DJ Travels Global. All Rights Reserved.</p>
         </div>
-        <p class="text-sm text-gray-400">&copy; <span id="year"></span> DJ Travels Global. All Rights Reserved.</p>
     </div>
 </footer>
 
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
-    // --- Page Navigation Logic ---
-    const pages = document.querySelectorAll('.page');
-    const navLinks = document.querySelectorAll('.nav-link');
-    function navigateTo(pageId) {
-        pages.forEach(p => p.classList.remove('active'));
-        const targetPage = document.getElementById(pageId);
-        if(targetPage) targetPage.classList.add('active');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('onclick') === `navigateTo('${pageId}')`) {
-                link.classList.add('active');
-            }
-        });
-        window.scrollTo(0, 0);
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
-    }
-
-    // --- Mobile Menu Toggle ---
-    document.getElementById('mobile-menu-button').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    // --- REMOVED THE CONFLICTING CONTACT FORM JAVASCRIPT ---
-
-    // --- Dynamic Year in Footer ---
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // --- Hero Slideshow Logic ---
-    let heroSlideIndex = 0;
-    const heroSlides = document.querySelectorAll('.hero-slide');
-    function showHeroSlides() {
-        heroSlides.forEach(slide => slide.classList.remove('active'));
-        heroSlideIndex++;
-        if (heroSlideIndex > heroSlides.length) { heroSlideIndex = 1 }
-        heroSlides[heroSlideIndex - 1].classList.add('active');
-        setTimeout(showHeroSlides, 5000); // Change image every 5 seconds
-    }
-
-    // --- Testimonial Carousel Logic ---
-    let testimonialSlideIndex = 0;
-    let testimonialInterval;
-    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-    const dotsContainer = document.getElementById('testimonial-dots');
-
-    // Create dots
-    if (dotsContainer) {
-        testimonialSlides.forEach((_, i) => {
-            const dot = document.createElement('span');
-            dot.classList.add('testimonial-dot');
-            dot.setAttribute('onclick', `currentTestimonialSlide(${i})`);
-            dotsContainer.appendChild(dot);
-        });
-    }
-    const testimonialDots = document.querySelectorAll('.testimonial-dot');
-
-    function showTestimonialSlides(n) {
-        testimonialSlideIndex = n;
-        testimonialSlides.forEach(slide => slide.classList.remove('active'));
-        testimonialDots.forEach(dot => dot.classList.remove('active'));
-
-        testimonialSlides[testimonialSlideIndex].classList.add('active');
-        testimonialDots[testimonialSlideIndex].classList.add('active');
-    }
-
-    function autoShowTestimonials() {
-        testimonialSlideIndex++;
-        if (testimonialSlideIndex >= testimonialSlides.length) { testimonialSlideIndex = 0 }
-        showTestimonialSlides(testimonialSlideIndex);
-    }
-
-    function currentTestimonialSlide(n) {
-        showTestimonialSlides(n);
-        // Reset interval when a dot is clicked
-        clearInterval(testimonialInterval);
-        testimonialInterval = setInterval(autoShowTestimonials, 7000);
-    }
-
-    // --- Initialize on page load ---
-    document.addEventListener('DOMContentLoaded', () => {
-        navigateTo('home');
-
-        // Start Hero Slideshow
-        if(heroSlides.length > 0) {
-            showHeroSlides();
-        }
-
-        // Start Testimonial Carousel
-        if(testimonialSlides.length > 0) {
-            showTestimonialSlides(testimonialSlideIndex);
-            testimonialInterval = setInterval(autoShowTestimonials, 7000); // Change testimonial every 7 seconds
-        }
+<!-- Mobile Menu Toggle -->
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        menu.classList.toggle('hidden');
+        this.setAttribute('aria-expanded', !expanded);
     });
 </script>
+
+<!-- Hero Slideshow -->
+<script>
+    (function() {
+        var heroSlideIndex = 0;
+        var heroSlides = document.querySelectorAll('.hero-slide');
+        function showHeroSlides() {
+            heroSlides.forEach(function(slide) { slide.classList.remove('active'); });
+            heroSlideIndex++;
+            if (heroSlideIndex > heroSlides.length) { heroSlideIndex = 1; }
+            heroSlides[heroSlideIndex - 1].classList.add('active');
+            setTimeout(showHeroSlides, 5000);
+        }
+        if (heroSlides.length > 0) { showHeroSlides(); }
+    })();
+</script>
+
+<!-- Testimonial Carousel -->
+<script>
+    (function() {
+        var idx = 0;
+        var slides = document.querySelectorAll('.testimonial-slide');
+        var dotsContainer = document.getElementById('testimonial-dots');
+        var interval;
+        if (dotsContainer && slides.length > 0) {
+            slides.forEach(function(_, i) {
+                var dot = document.createElement('span');
+                dot.classList.add('testimonial-dot');
+                dot.setAttribute('role', 'button');
+                dot.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
+                dot.addEventListener('click', function() { goTo(i); });
+                dotsContainer.appendChild(dot);
+            });
+        }
+        var dots = document.querySelectorAll('.testimonial-dot');
+        function show(n) {
+            idx = n;
+            slides.forEach(function(s) { s.classList.remove('active'); });
+            dots.forEach(function(d) { d.classList.remove('active'); });
+            slides[idx].classList.add('active');
+            dots[idx].classList.add('active');
+        }
+        function next() { idx++; if (idx >= slides.length) idx = 0; show(idx); }
+        function goTo(n) { show(n); clearInterval(interval); interval = setInterval(next, 7000); }
+        if (slides.length > 0) { show(0); interval = setInterval(next, 7000); }
+    })();
+</script>
+
 </body>
 </html>
