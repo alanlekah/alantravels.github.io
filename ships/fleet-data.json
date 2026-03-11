@@ -1,0 +1,29 @@
+[
+    {
+        "ship_name": "Icon of the Seas",
+        "line": "Royal Caribbean",
+        "size": "250,800 tons",
+        "capacity": "7,600 guests",
+        "highlight": "Largest waterpark at sea (Thrill Island)",
+        "expert_tip": "Book a Surfside balcony if you have kids under 6—it's the best family neighborhood ever built.",
+        "slug": "icon-of-the-seas"
+    },
+    {
+        "ship_name": "Wonder of the Seas",
+        "line": "Royal Caribbean",
+        "size": "236,857 tons",
+        "capacity": "6,988 guests",
+        "highlight": "The Mason Jar Southern Restaurant",
+        "expert_tip": "The Central Park neighborhood is surprisingly quiet at night—perfect for a romantic walk.",
+        "slug": "wonder-of-the-seas"
+    },
+    {
+        "ship_name": "Scarlet Lady",
+        "line": "Virgin Voyages",
+        "size": "110,000 tons",
+        "capacity": "2,770 guests",
+        "highlight": "The Manor Nightclub",
+        "expert_tip": "Don't miss the Korean BBQ (Gunbae)—it's the best social dining experience at sea.",
+        "slug": "scarlet-lady"
+    }
+]
