@@ -40,9 +40,9 @@ Your unique angle is that you are a **real person**, not a corporate rep. Every 
 ---
 
 ## **Posting Cadence**
-- **TikTok:** 3x per week (Morning EST).
-- **Instagram Reels:** 2x per week (Cross-post from TikTok).
+- **Instagram Reels:** 3x per week.
 - **Instagram Stories:** Daily (Show "Behind the Scenes" of you planning a client's trip).
+- **Instagram Carousels:** 2x per week (Automated via auto_post.py).
 
 ## **Call to Action (CTA)**
 - Always use: **"Request a free quote at the link in bio!"**

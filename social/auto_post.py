@@ -37,7 +37,8 @@ def run_auto_post():
     print(f"🚀 Preparing automated post for: {post_data['topic']}")
 
     # Collect images (Using favicon as fallback, replace with ship photos in /images for best results)
-    image_path = os.path.abspath("../favicon.png")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    image_path = os.path.join(base_dir, "favicon.png")
     
     # Files array for the API
     # In a real scenario, you'd want 6 different images here
@@ -46,14 +47,14 @@ def run_auto_post():
         ('photos[]', ('photo2.png', open(image_path, 'rb'), 'image/png'))
     ]
 
-    # Form Data
-    data = {
-        "user": MANAGED_USER,
-        "platforms[]": ["tiktok", "instagram"],
-        "caption": post_data['caption'],
-        "auto_add_music": "true",
-        "privacy_level": "PUBLIC_TO_EVERYONE"
-    }
+    # Form Data - Targeting Instagram Only
+    data = [
+        ("user", MANAGED_USER),
+        ("platform[]", "instagram"),
+        ("caption", post_data['caption']),
+        ("auto_add_music", "true"),
+        ("privacy_level", "PUBLIC_TO_EVERYONE")
+    ]
 
     # Headers
     headers = {
