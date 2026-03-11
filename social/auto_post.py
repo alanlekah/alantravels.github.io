@@ -4,7 +4,7 @@ import random
 
 # CONFIGURATION
 API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZWthaHRyYXZlbEBnbWFpbC5jb20iLCJleHAiOjQ5MjY3OTU3NzksImp0aSI6IjY2N2M0ODA1LWMwYjUtNDE2MS05OWViLTE3OGU1NjRlODJkMCJ9.MQ6JJSZXLd8XE7NSRkIb8AElT0wbT3qB4WRwYFO9-4g"
-MANAGED_USER = "@cruisesbyalan" # Updated to match your exact handle
+MANAGED_USER = "ai" # Updated to match your specific managed user name
 BASE_URL = "https://api.upload-post.com/api/upload_photos"
 
 # TOPICS & CAPTIONS
