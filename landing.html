@@ -82,6 +82,7 @@
                             <input type="hidden" name="_subject" value="LEAD: Ad Landing Page Quote Request">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_next" value="https://cruisesbyalan.com/contact.html">
+                            <input type="hidden" name="gclid" id="gclid-field" value="">
 
                             <div class="mb-4">
                                 <label class="block text-sm font-bold text-gray-700 mb-1">Your Name</label>
@@ -186,6 +187,15 @@
         });
         // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
     }
+
+    // Capture gclid from URL for offline conversion tracking
+    (function() {
+        var match = window.location.search.match(/[?&]gclid=([^&]*)/);
+        if (match) {
+            var field = document.getElementById('gclid-field');
+            if (field) field.value = match[1];
+        }
+    })();
 </script>
 
 </body>

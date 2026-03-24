@@ -126,6 +126,7 @@
                         <input type="hidden" name="_subject" value="LEAD: Cruise Booking Audit">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://cruisesbyalan.com/audit.html?thanks=1">
+                        <input type="hidden" name="gclid" id="gclid-field" value="">
                         <input type="hidden" id="hidden-cruiseLine" name="Cruise Line" value="">
                         <input type="hidden" id="hidden-sailWindow" name="Sail Window" value="">
                         <input type="hidden" id="hidden-paymentStatus" name="Payment Status" value="">
@@ -216,6 +217,15 @@
             'value': 1
         });
     }
+
+    // Capture gclid from URL for offline conversion tracking
+    (function() {
+        var match = window.location.search.match(/[?&]gclid=([^&]*)/);
+        if (match) {
+            var field = document.getElementById('gclid-field');
+            if (field) field.value = match[1];
+        }
+    })();
 </script>
 
 <!-- Audit Logic -->

@@ -86,6 +86,7 @@
                         <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" onsubmit="trackConversion('quote_form_submit')">
                             <input type="hidden" name="_subject" value="URGENT: New Cruise Quote Request">
                             <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="gclid" id="gclid-field" value="">
 
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
@@ -239,6 +240,15 @@
         });
         // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
     }
+
+    // Capture gclid from URL for offline conversion tracking
+    (function() {
+        var match = window.location.search.match(/[?&]gclid=([^&]*)/);
+        if (match) {
+            var field = document.getElementById('gclid-field');
+            if (field) field.value = match[1];
+        }
+    })();
 </script>
 
 <script>
