@@ -47,7 +47,7 @@
 
         <!-- Mobile: Tap-to-Call CTA + Menu Toggle -->
         <div class="flex items-center space-x-3 md:hidden">
-            <a href="tel:630-561-0344" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm">
+            <a href="tel:630-561-0344" onclick="trackConversion('phone_call_click')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm">
                 <i class="fas fa-phone"></i> Call
             </a>
             <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1">
@@ -83,7 +83,7 @@
                 <!-- High-Conversion Quote Form -->
                 <div class="w-full lg:w-8/12 px-4 mb-10 lg:mb-0">
                     <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-                        <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST">
+                        <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" onsubmit="trackConversion('quote_form_submit')">
                             <input type="hidden" name="_subject" value="URGENT: New Cruise Quote Request">
                             <input type="hidden" name="_captcha" value="false">
 
@@ -165,7 +165,7 @@
                         <!-- Direct Contact -->
                         <div class="bg-gray-800 text-white rounded-2xl p-8 shadow-lg">
                             <h3 class="text-xl font-bold mb-4 text-center">Need a Faster Answer?</h3>
-                            <a href="tel:630-561-0344" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition mb-4">
+                            <a href="tel:630-561-0344" onclick="trackConversion('phone_call_click')" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition mb-4">
                                 <i class="fas fa-phone mr-2"></i> 630-561-0344
                             </a>
                             <a href="mailto:alekahtravel@gmail.com" class="block text-center border border-gray-500 hover:bg-gray-700 text-white py-3 px-6 rounded-lg transition">
@@ -228,6 +228,17 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VNKMY0MW57');
+    // Google Ads — uncomment once conversion action is created
+    // gtag('config', 'AW-XXXXXXXXXX');
+
+    function trackConversion(eventName) {
+        gtag('event', eventName, {
+            'event_category': 'lead',
+            'event_label': eventName,
+            'value': 1
+        });
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
+    }
 </script>
 
 <script>

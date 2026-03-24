@@ -140,7 +140,7 @@
         </div>
         <!-- Mobile: Tap-to-Call CTA + Menu Toggle -->
         <div class="flex items-center space-x-3 md:hidden">
-            <a href="tel:630-561-0344" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm" aria-label="Call 630-561-0344">
+            <a href="tel:630-561-0344" onclick="trackConversion('phone_call_click')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm" aria-label="Call 630-561-0344">
                 <i class="fas fa-phone" aria-hidden="true"></i> Call
             </a>
             <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -482,17 +482,30 @@
 </footer>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/16305610344?text=Hi%20Alan%2C%20I%20have%20a%20quick%20cruise%20question" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" style="position:fixed;bottom:1.5rem;right:1.5rem;background:#25D366;color:#fff;border-radius:50%;width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:50;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#1DA851'" onmouseout="this.style.background='#25D366'">
+<a href="https://wa.me/16305610344?text=Hi%20Alan%2C%20I%20have%20a%20quick%20cruise%20question" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" onclick="trackConversion('whatsapp_click')" style="position:fixed;bottom:1.5rem;right:1.5rem;background:#25D366;color:#fff;border-radius:50%;width:3.5rem;height:3.5rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.25);z-index:50;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#1DA851'" onmouseout="this.style.background='#25D366'">
     <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
 </a>
 
-<!-- Google Analytics 4 -->
+<!-- Google Analytics 4 + Google Ads Conversion Tracking -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNKMY0MW57"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VNKMY0MW57');
+    // Google Ads conversion tracking — AW-ID will be set once conversion actions are created
+    // gtag('config', 'AW-XXXXXXXXXX');
+
+    // Track conversion events (WhatsApp clicks, form submits, phone calls)
+    function trackConversion(eventName) {
+        gtag('event', eventName, {
+            'event_category': 'lead',
+            'event_label': eventName,
+            'value': 1
+        });
+        // Once Google Ads conversion action is created, uncomment:
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
+    }
 </script>
 
 <!-- Mobile Menu Toggle -->
