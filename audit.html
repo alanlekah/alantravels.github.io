@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Cruise Booking Audit | Alan Lekah - Cruise Expert</title>
+    <meta name="description" content="Already booked a cruise? Let me check if you're eligible for a free transfer with better perks, onboard credits, and current promotions.">
+    <link rel="canonical" href="https://cruisesbyalan.com/audit.html">
+    <meta property="og:title" content="Free Cruise Booking Audit | Alan Lekah">
+    <meta property="og:description" content="Already booked a cruise? I'll check if you can get a better deal — for free.">
+    <meta property="og:url" content="https://cruisesbyalan.com/audit.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="bg-white shadow-md" style="position:sticky;top:0;z-index:50;">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main navigation">
+        <a href="/" class="text-2xl font-bold text-blue-800">
+            Alan Lekah <span class="text-gray-500 font-normal text-lg hidden sm:inline">| Cruise Expert</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="/" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="destinations.html" class="nav-link">Destinations</a>
+            <a href="deals.html" class="nav-link">Deals & Perks</a>
+            <a href="cruise-lines.html" class="nav-link">Cruise Lines</a>
+            <a href="upcoming-cruises.html" class="nav-link">My Cruises</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition duration-300 hidden md:inline-block">Get Your Free Quote</a>
+        </div>
+        <div class="flex items-center space-x-3 md:hidden">
+            <a href="tel:630-561-0344" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm" aria-label="Call 630-561-0344">
+                <i class="fas fa-phone" aria-hidden="true"></i> Call
+            </a>
+            <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t" role="navigation" aria-label="Mobile navigation">
+        <a href="/" class="block py-3 px-6 text-sm nav-link">Home</a>
+        <a href="about.html" class="block py-3 px-6 text-sm nav-link">About Me</a>
+        <a href="destinations.html" class="block py-3 px-6 text-sm nav-link">Destinations</a>
+        <a href="deals.html" class="block py-3 px-6 text-sm nav-link">Deals & Perks</a>
+        <a href="cruise-lines.html" class="block py-3 px-6 text-sm nav-link">Cruise Lines</a>
+        <a href="upcoming-cruises.html" class="block py-3 px-6 text-sm nav-link">My Cruises</a>
+        <a href="blog.html" class="block py-3 px-6 text-sm nav-link">Blog</a>
+        <a href="contact.html" class="block py-3 px-6 text-sm nav-link">Contact</a>
+    </div>
+</header>
+
+<main>
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-10">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Free Cruise Booking Audit</h1>
+                    <p class="text-gray-600 text-lg">Already booked a cruise? Answer a few quick questions and I'll tell you if you're leaving money on the table.</p>
+                </div>
+
+                <!-- Progress bar -->
+                <div style="background:#e2e8f0;border-radius:9999px;height:0.5rem;margin-bottom:2rem;">
+                    <div id="progress-bar" style="background:#2563eb;height:100%;border-radius:9999px;width:20%;transition:width 0.3s;"></div>
+                </div>
+
+                <!-- Step 1: Cruise Line -->
+                <div id="step-1" class="audit-step">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-ship text-blue-600" aria-hidden="true"></i> Which cruise line did you book with?</h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Royal Caribbean</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Celebrity Cruises</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Norwegian (NCL)</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Carnival</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Princess Cruises</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">MSC Cruises</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Virgin Voyages</button>
+                        <button onclick="selectOption(1,'cruiseLine',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Other</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: When does it sail? -->
+                <div id="step-2" class="audit-step" style="display:none;">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-calendar text-blue-600" aria-hidden="true"></i> When does your cruise sail?</h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="selectOption(2,'sailWindow',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Within 30 days</button>
+                        <button onclick="selectOption(2,'sailWindow',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">1–3 months out</button>
+                        <button onclick="selectOption(2,'sailWindow',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">3–6 months out</button>
+                        <button onclick="selectOption(2,'sailWindow',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">6+ months out</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Payment status -->
+                <div id="step-3" class="audit-step" style="display:none;">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-credit-card text-blue-600" aria-hidden="true"></i> Have you paid in full?</h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="selectOption(3,'paymentStatus',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Just the deposit</button>
+                        <button onclick="selectOption(3,'paymentStatus',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Paid in full</button>
+                        <button onclick="selectOption(3,'paymentStatus',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Not sure</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: How did you book? -->
+                <div id="step-4" class="audit-step" style="display:none;">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-laptop text-blue-600" aria-hidden="true"></i> How did you originally book?</h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="selectOption(4,'bookingMethod',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Directly with the cruise line</button>
+                        <button onclick="selectOption(4,'bookingMethod',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Through another travel agent</button>
+                        <button onclick="selectOption(4,'bookingMethod',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Third-party site (Costco, Expedia, etc.)</button>
+                        <button onclick="selectOption(4,'bookingMethod',this)" class="p-4 border border-gray-200 rounded-lg text-left hover:bg-blue-50 hover:border-blue-300 transition font-semibold text-gray-700">Not sure</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Results + Contact capture -->
+                <div id="step-5" class="audit-step" style="display:none;">
+                    <!-- Result banner — filled by JS -->
+                    <div id="audit-result" style="border-radius:0.75rem;padding:1.5rem;margin-bottom:1.5rem;"></div>
+
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">Get Your Full Audit Results</h2>
+                    <p class="text-gray-600 text-sm mb-5">Enter your details and I'll personally review your booking for savings, available promotions, and onboard credits.</p>
+                    <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" onsubmit="trackConversion('audit_form_submit')">
+                        <input type="hidden" name="_subject" value="LEAD: Cruise Booking Audit">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://cruisesbyalan.com/audit.html?thanks=1">
+                        <input type="hidden" id="hidden-cruiseLine" name="Cruise Line" value="">
+                        <input type="hidden" id="hidden-sailWindow" name="Sail Window" value="">
+                        <input type="hidden" id="hidden-paymentStatus" name="Payment Status" value="">
+                        <input type="hidden" id="hidden-bookingMethod" name="Booking Method" value="">
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Your Name</label>
+                            <input type="text" name="name" required placeholder="First and last name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+                            <input type="email" name="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Phone (optional)</label>
+                            <input type="tel" name="phone" placeholder="For a faster response" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-5">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Booking details (ship name, sail date, cabin type, price — whatever you have)</label>
+                            <textarea name="booking_details" rows="3" placeholder="e.g. Royal Caribbean Utopia of the Seas, July 12 2026, balcony cabin, $1,800 per person" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
+                            Send My Audit to Alan &rarr;
+                        </button>
+                        <p class="text-center text-gray-400 text-xs mt-3"><i class="fas fa-lock" aria-hidden="true"></i> 100% free. No obligation. Your info stays private.</p>
+                    </form>
+                </div>
+
+                <!-- Thank you state (shown via URL param) -->
+                <div id="thank-you" style="display:none;" class="text-center py-12">
+                    <div style="background:#dcfce7;color:#166534;display:inline-flex;align-items:center;justify-content:center;width:4rem;height:4rem;border-radius:50%;font-size:1.5rem;margin-bottom:1rem;">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Audit Request Received</h2>
+                    <p class="text-gray-600 mb-6">I'll review your booking and get back to you within 24 hours with my findings — savings opportunities, current promotions, and available onboard credits.</p>
+                    <a href="/" class="text-blue-600 font-semibold hover:underline">&larr; Back to Home</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <p class="text-2xl font-bold mb-2">Alan Lekah</p>
+                <p class="text-gray-400 mb-1">Your Personal Cruise Expert</p>
+                <p class="text-gray-400 text-sm">Agency: DJ Travels Global (Global Exception LLC)</p>
+            </div>
+            <div>
+                <p class="text-lg font-semibold mb-3">Get Cruise Deals &amp; Tips</p>
+                <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-2">
+                    <input type="hidden" name="_subject" value="New Email Subscriber">
+                    <input type="hidden" name="_captcha" value="false">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required class="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Subscribe</button>
+                </form>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-lg font-semibold mb-3">Follow Along</p>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="https://instagram.com/cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on Instagram"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.tiktok.com/@cruisesbyalan" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-300" aria-label="Follow on TikTok"><i class="fab fa-tiktok fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 DJ Travels Global. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- GA4 + Conversion Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNKMY0MW57"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VNKMY0MW57');
+
+    function trackConversion(eventName) {
+        gtag('event', eventName, {
+            'event_category': 'lead',
+            'event_label': 'audit_page',
+            'value': 1
+        });
+    }
+</script>
+
+<!-- Audit Logic -->
+<script>
+(function() {
+    // Check for thank-you state
+    if (window.location.search.indexOf('thanks=1') !== -1) {
+        document.querySelectorAll('.audit-step').forEach(function(s) { s.style.display = 'none'; });
+        document.getElementById('progress-bar').parentElement.style.display = 'none';
+        document.querySelector('.text-center.mb-10').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+        return;
+    }
+
+    var totalSteps = 5;
+    var answers = {};
+
+    window.selectOption = function(step, key, btn) {
+        answers[key] = btn.textContent.trim();
+        document.getElementById('hidden-' + key).value = answers[key];
+
+        // Highlight selected
+        btn.parentElement.querySelectorAll('button').forEach(function(b) {
+            b.style.background = '';
+            b.style.borderColor = '';
+            b.style.color = '';
+        });
+        btn.style.background = '#dbeafe';
+        btn.style.borderColor = '#2563eb';
+        btn.style.color = '#1e40af';
+
+        // Advance after brief delay
+        setTimeout(function() {
+            document.getElementById('step-' + step).style.display = 'none';
+            var next = step + 1;
+            if (next <= totalSteps) {
+                document.getElementById('step-' + next).style.display = 'block';
+                document.getElementById('progress-bar').style.width = (next / totalSteps * 100) + '%';
+            }
+            // Show result on step 5
+            if (next === 5) {
+                showResult();
+            }
+        }, 300);
+    };
+
+    function showResult() {
+        var result = document.getElementById('audit-result');
+        var canTransfer = true;
+        var reasons = [];
+
+        // Transfer logic
+        var method = answers.bookingMethod || '';
+        var payment = answers.paymentStatus || '';
+        var window_ = answers.sailWindow || '';
+
+        if (method === 'Through another travel agent') {
+            canTransfer = false;
+            reasons.push('Bookings made through another travel agent typically cannot be transferred — the original agent holds the reservation.');
+        }
+        if (method === 'Third-party site (Costco, Expedia, etc.)') {
+            canTransfer = false;
+            reasons.push('Third-party bookings (Costco, Expedia, etc.) are usually locked to that platform and can\'t be transferred.');
+        }
+        if (window_ === 'Within 30 days') {
+            canTransfer = false;
+            reasons.push('With sailing less than 30 days away, most cruise lines won\'t allow booking transfers.');
+        }
+
+        if (canTransfer) {
+            result.style.background = '#dcfce7';
+            result.style.border = '1px solid #86efac';
+            result.innerHTML = '<div style="display:flex;align-items:flex-start;gap:0.75rem;">' +
+                '<i class="fas fa-check-circle" style="color:#16a34a;font-size:1.5rem;margin-top:0.15rem;" aria-hidden="true"></i>' +
+                '<div>' +
+                '<p style="font-weight:700;color:#166534;font-size:1.1rem;margin-bottom:0.25rem;">Good news — your booking is likely eligible for transfer!</p>' +
+                '<p style="color:#166534;font-size:0.9rem;">Based on your answers, I can likely take over your reservation and check for available promotions, onboard credits, and price adjustments. Fill in your details below and I\'ll do a full review.</p>' +
+                '</div></div>';
+        } else {
+            result.style.background = '#fef3c7';
+            result.style.border = '1px solid #fcd34d';
+            result.innerHTML = '<div style="display:flex;align-items:flex-start;gap:0.75rem;">' +
+                '<i class="fas fa-exclamation-triangle" style="color:#d97706;font-size:1.5rem;margin-top:0.15rem;" aria-hidden="true"></i>' +
+                '<div>' +
+                '<p style="font-weight:700;color:#92400e;font-size:1.1rem;margin-bottom:0.25rem;">Transfer may not be possible, but I can still help.</p>' +
+                '<p style="color:#92400e;font-size:0.9rem;margin-bottom:0.5rem;">' + reasons.join(' ') + '</p>' +
+                '<p style="color:#92400e;font-size:0.9rem;">Send me your details anyway — I\'ll review your booking and let you know if there are any options, or help you find a better deal for your next cruise.</p>' +
+                '</div></div>';
+        }
+    }
+})();
+</script>
+
+<!-- Mobile Menu Toggle -->
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        menu.classList.toggle('hidden');
+        this.setAttribute('aria-expanded', !expanded);
+    });
+</script>
+
+</body>
+</html>
