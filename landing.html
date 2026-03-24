@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Cruise Planning &amp; Exclusive Deals | Alan Lekah</title>
+    <meta name="description" content="Get a free, personalized cruise quote with exclusive perks. 15+ cruises sailed, 100% free service. Royal Caribbean, Celebrity, Norwegian & more.">
+    <meta name="robots" content="noindex"><!-- Landing page for ads only, not for organic -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Minimal top bar — no full nav, just brand + phone -->
+<header class="bg-white shadow-md" style="position:sticky;top:0;z-index:50;">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-blue-800">Alan Lekah <span class="text-gray-500 font-normal text-sm">| Cruise Expert</span></a>
+        <a href="tel:630-561-0344" onclick="trackConversion('phone_call_click')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 text-sm">
+            <i class="fas fa-phone" aria-hidden="true"></i> <span class="hidden sm:inline">630-561-0344</span><span class="sm:hidden">Call Now</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero — straight to the point -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center -mx-4">
+                <!-- Left: Value prop -->
+                <div class="w-full lg:w-7/12 px-4 mb-10 lg:mb-0">
+                    <div style="display:inline-block;background:#dcfce7;color:#166534;font-size:0.85rem;font-weight:700;padding:0.35rem 0.85rem;border-radius:9999px;margin-bottom:1rem;">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i> 100% Free — The Cruise Lines Pay Me, Not You
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" style="line-height:1.2;">Stop Overpaying for Cruises.<br>Let a Real Expert Handle It.</h1>
+                    <p class="text-gray-600 text-lg mb-6">I've sailed 15+ cruises personally. I know the ships, the cabins, and the tricks to get you the best deal with perks you can't get booking direct.</p>
+
+                    <!-- Trust signals row -->
+                    <div class="flex flex-wrap gap-4 mb-8 text-sm text-gray-600">
+                        <div class="flex items-center gap-2"><i class="fas fa-ship text-blue-600" aria-hidden="true"></i> 15+ Cruises Sailed</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-star text-yellow-500" aria-hidden="true"></i> 5.0 Google Reviews</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-clock text-blue-600" aria-hidden="true"></i> Quotes in 24 Hours</div>
+                    </div>
+
+                    <!-- How It Works — inline -->
+                    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:0.75rem;padding:1.25rem 1.5rem;">
+                        <p class="font-bold text-gray-800 mb-3" style="font-size:0.95rem;">How It Works — 3 Simple Steps</p>
+                        <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                            <div>
+                                <div style="background:#dbeafe;color:#1e40af;width:2.5rem;height:2.5rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin-bottom:0.5rem;">1</div>
+                                <p class="text-gray-700 font-semibold">Tell Me What You Want</p>
+                                <p class="text-gray-500" style="font-size:0.8rem;">Dates, destination, budget — whatever you know so far.</p>
+                            </div>
+                            <div>
+                                <div style="background:#dbeafe;color:#1e40af;width:2.5rem;height:2.5rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin-bottom:0.5rem;">2</div>
+                                <p class="text-gray-700 font-semibold">I Find the Best Options</p>
+                                <p class="text-gray-500" style="font-size:0.8rem;">I compare across all cruise lines and find exclusive perks.</p>
+                            </div>
+                            <div>
+                                <div style="background:#dbeafe;color:#1e40af;width:2.5rem;height:2.5rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin-bottom:0.5rem;">3</div>
+                                <p class="text-gray-700 font-semibold">You Book &amp; Save</p>
+                                <p class="text-gray-500" style="font-size:0.8rem;">Same price or better, plus perks you can't get on your own.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Quote form -->
+                <div class="w-full lg:w-5/12 px-4">
+                    <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+                        <h2 class="text-xl font-bold text-gray-800 mb-1 text-center">Get Your Free Quote</h2>
+                        <p class="text-gray-500 text-sm text-center mb-5">No spam, no obligation. Just options.</p>
+                        <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" onsubmit="trackConversion('quote_form_submit')">
+                            <input type="hidden" name="_subject" value="LEAD: Ad Landing Page Quote Request">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://cruisesbyalan.com/contact.html">
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Your Name</label>
+                                <input type="text" name="name" required placeholder="First and last name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+                                <input type="email" name="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Where do you want to cruise?</label>
+                                <select name="destination" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500">
+                                    <option value="Not Sure Yet">I'm not sure yet</option>
+                                    <option value="Caribbean">Caribbean</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Mediterranean">Mediterranean</option>
+                                    <option value="Northern Europe">Northern Europe</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-5">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Anything else I should know?</label>
+                                <textarea name="message" rows="2" placeholder="Dates, number of travelers, budget, special occasion..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
+                                Get My Free Quote &rarr;
+                            </button>
+                            <p class="text-center text-gray-400 text-xs mt-3"><i class="fas fa-lock" aria-hidden="true"></i> Your info stays private. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social proof — real review -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="flex justify-center text-yellow-400 mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-lg italic mb-3">"Thank you for actually doing everything you said you would... You're the only person I will be referring anyone to. You crush everyone's so called 'best' deals!"</p>
+                <p class="font-semibold text-gray-800">— Jeffrey B.</p>
+                <span class="inline-block mt-2 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"><i class="fab fa-google" aria-hidden="true"></i> Google Review</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real photos strip -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm font-semibold mb-4" style="text-transform:uppercase;letter-spacing:0.05em;">From my actual cruises — not stock photos</p>
+            <div class="grid grid-cols-4 gap-3 max-w-3xl mx-auto">
+                <img src="images/alan/hubbard-glacier-selfie.jpg" alt="Alan at Hubbard Glacier" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+                <img src="images/alan/quantum-alaska-couple.jpg" alt="Alan in front of Quantum of the Seas" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+                <img src="images/alan/casino-royale-star-ots.jpg" alt="Alan at Casino Royale on Star of the Seas" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+                <img src="images/alan/st-lucia-mountain.png" alt="Alan at the Pitons, St. Lucia" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-12 bg-blue-800 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-3">Ready to Start Planning?</h2>
+            <p class="mb-6 text-blue-200">Call, text, or WhatsApp — whatever's easiest for you.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="tel:630-561-0344" onclick="trackConversion('phone_call_click')" class="bg-white text-blue-800 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone" aria-hidden="true"></i> 630-561-0344
+                </a>
+                <a href="https://wa.me/16305610344?text=Hi%20Alan%2C%20I%20saw%20your%20ad%20and%20have%20a%20cruise%20question" target="_blank" rel="noopener noreferrer" onclick="trackConversion('whatsapp_click')" style="background:#25D366;color:#fff;font-weight:700;padding:0.75rem 1.5rem;border-radius:9999px;transition:transform 0.3s;display:inline-block;text-decoration:none;">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Minimal footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center text-sm text-gray-400">
+        &copy; 2026 DJ Travels Global (Global Exception LLC). All Rights Reserved.
+    </div>
+</footer>
+
+<!-- Google Analytics + Conversion Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNKMY0MW57"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VNKMY0MW57');
+    // Google Ads — uncomment once conversion action is created
+    // gtag('config', 'AW-XXXXXXXXXX');
+
+    function trackConversion(eventName) {
+        gtag('event', eventName, {
+            'event_category': 'lead',
+            'event_label': 'landing_page',
+            'value': 1
+        });
+        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
+    }
+</script>
+
+</body>
+</html>
