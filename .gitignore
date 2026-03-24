@@ -1,3 +1,6 @@
 node_modules/
 .kiro/
 .vscode/
+venv/
+seo/
+seo_report.py
