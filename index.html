@@ -556,8 +556,14 @@
             'event_label': eventName,
             'value': 1
         });
-        // Once Google Ads conversion action is created, uncomment:
-        // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXXX/LABEL' });
+        var conversionLabels = {
+            'quote_form_submit': 'AW-18064716152/NO6wCL26gpkcEPji9qVD',
+            'whatsapp_click': 'AW-18064716152/ccBoCMC6gpkcEPji9qVD',
+            'phone_call_click': 'AW-18064716152/-qICCMO6gpkcEPji9qVD'
+        };
+        if (conversionLabels[eventName]) {
+            gtag('event', 'conversion', { 'send_to': conversionLabels[eventName] });
+        }
     }
 </script>
 
