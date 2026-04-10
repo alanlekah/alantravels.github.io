@@ -86,7 +86,7 @@
                         <form action="https://formsubmit.co/alekahtravel@gmail.com" method="POST" onsubmit="trackConversion('quote_form_submit')">
                             <input type="hidden" name="_subject" value="LEAD: Ad Landing Page Quote Request">
                             <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://cruisesbyalan.com/contact.html">
+                            <input type="hidden" name="_next" value="https://cruisesbyalan.com/landing.html?thanks=1">
                             <input type="hidden" name="gclid" id="gclid-field" value="">
 
                             <div class="mb-4">
@@ -205,6 +205,16 @@
         if (match) {
             var field = document.getElementById('gclid-field');
             if (field) field.value = match[1];
+        }
+        // Thank you state
+        if (window.location.search.indexOf('thanks=1') !== -1) {
+            document.querySelector('main').innerHTML = '<section class="py-20"><div class="container mx-auto px-6 text-center max-w-2xl">' +
+                '<div style="background:#dcfce7;color:#166534;display:inline-flex;align-items:center;justify-content:center;width:4rem;height:4rem;border-radius:50%;font-size:1.5rem;margin-bottom:1rem;"><i class="fas fa-check" aria-hidden="true"></i></div>' +
+                '<h2 class="text-3xl font-bold text-gray-800 mb-4">Got It — I\'ll Be in Touch Soon!</h2>' +
+                '<p class="text-gray-600 text-lg mb-6">I\'ll review your request and reach out within 24 hours with personalized cruise options and pricing. If you left your phone number, expect a call or text from me.</p>' +
+                '<p class="text-gray-500 mb-8">In the meantime, check out some of my cruise tips:</p>' +
+                '<a href="blog.html" class="text-blue-600 font-semibold hover:underline">Browse the Blog &rarr;</a>' +
+                '</div></section>';
         }
     })();
 </script>
