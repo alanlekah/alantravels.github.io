@@ -88,7 +88,11 @@
                             <button onclick="startAudit()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
                                 Check My Booking &rarr;
                             </button>
-                            <p class="text-center text-gray-400 text-xs mt-3">Or <a href="#quote-form" onclick="showQuoteForm()" class="text-blue-600 hover:underline">get a free quote</a> for a new cruise</p>
+                            <div style="text-align:center;margin-top:0.75rem;">
+                                <button onclick="showQuoteForm()" style="background:none;border:2px solid #2563eb;color:#2563eb;font-weight:700;padding:0.6rem 1.5rem;border-radius:9999px;cursor:pointer;font-size:0.95rem;width:100%;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#2563eb';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='#2563eb'">
+                                    Or Get a Free Quote for a New Cruise
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Step 1 -->
@@ -313,7 +317,8 @@
         document.getElementById('audit-intro').style.display = 'none';
         document.getElementById('lp-step-1').style.display = 'block';
     };
-    window.showQuoteForm = function() {
+    window.showQuoteForm = function(e) {
+        if (e) e.preventDefault();
         document.getElementById('audit-intro').style.display = 'none';
         document.getElementById('quote-form').style.display = 'block';
     };
